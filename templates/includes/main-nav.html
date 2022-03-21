@@ -1,5 +1,16 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="about-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About us
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="about-link">
+                <a href="" class="dropdown-item">Our mission</a>
+                <a href="" class="dropdown-item">How to use our designs</a>
+            </div>
+        </li>
+
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-designs-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Designs
@@ -26,23 +37,13 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="about-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                About us
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="about-link">
-                <a href="" class="dropdown-item">Our mission</a>
-                <a href="" class="dropdown-item">How to use our designs</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="product-placement-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Product Placement
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="product-placement-link">
-                <a href="" class="dropdown-item">Homeware</a>
-                <a href="" class="dropdown-item">Stationary</a>
-                <a href="" class="dropdown-item">Clothing</a>
+                <a href="{% url 'products' %}?category=homeware" class="dropdown-item">Homeware</a>
+                <a href="{% url 'products' %}?category=stationary" class="dropdown-item">Stationary</a>
+                <a href="{% url 'products' %}?category=clothing" class="dropdown-item">Clothing</a>
             </div>
         </li>
     </ul>
