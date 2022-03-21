@@ -17,11 +17,11 @@
                 Categories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="categories-link">
-                <a href="" class="dropdown-item">Abstract</a>
-                <a href="" class="dropdown-item">Floral</a>
-                <a href="" class="dropdown-item">Nature</a>
-                <a href="" class="dropdown-item">Geometric</a>
-                <a href="" class="dropdown-item">Quirky</a>
+                <a href="{% url 'products' %}?category=abstract" class="dropdown-item">Abstract</a>
+                <a href="{% url 'products' %}?category=floral" class="dropdown-item">Floral</a>
+                <a href="{% url 'products' %}?category=nature" class="dropdown-item">Nature</a>
+                <a href="{% url 'products' %}?category=geometric" class="dropdown-item">Geometric</a>
+                <a href="{% url 'products' %}?category=quirky" class="dropdown-item">Quirky</a>
             </div>
         </li>
 
