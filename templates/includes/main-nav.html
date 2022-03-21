@@ -12,14 +12,14 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-designs-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Designs
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="patterns-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Patterns
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-designs-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?category=abstract,floral,nature,geometric,quirky" class="dropdown-item">All Patterns</a>
             </div>
         </li>
 
@@ -33,6 +33,7 @@
                 <a href="{% url 'products' %}?category=nature" class="dropdown-item">Nature</a>
                 <a href="{% url 'products' %}?category=geometric" class="dropdown-item">Geometric</a>
                 <a href="{% url 'products' %}?category=quirky" class="dropdown-item">Quirky</a>
+                <a href="{% url 'products' %}?category=abstract,floral,nature,geometric,quirky" class="dropdown-item">All Categories</a>
             </div>
         </li>
 
