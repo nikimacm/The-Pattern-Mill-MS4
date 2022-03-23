@@ -6,6 +6,7 @@ def bag_contents(request):
     bag_items = []
     total = 0
     product_count = 0
+    price = 0
 
     if total < settings.FIRST_ORDER_DISCOUNT:
         discount = total * Decimal(settings.STANDARD_PRICE_PERCENTAGE / 100)
@@ -21,8 +22,8 @@ def bag_contents(request):
         'total': total,
         'product_count': product_count,
         'price': price,
-        'standard_price_delta': fstandard_price_delta,
-        'first_order_discount': settings.FIRST_ORDER_DISCOUNT,
+        'standard_price_delta': standard_price_delta,
+        'first_order_discount': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
     }
 
