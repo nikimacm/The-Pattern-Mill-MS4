@@ -31,6 +31,11 @@ body {
     background: black;
     color: white;
     min-width: 260px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
 }
 
 .btn-black {
@@ -118,9 +123,6 @@ a.category-badge > span.badge:hover {
     text-align: center;
   }
 
-  .copyright {
-      color: #fff !important;
-  }
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
