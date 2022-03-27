@@ -24,6 +24,10 @@ body {
     text-transform: uppercase;
 }
 
+#main-logo {
+    font-family: 'Viaoda Libre', cursive;
+    letter-spacing: 5em;
+}
 .main-logo-link {
     width: fit-content;
 }
@@ -113,15 +117,17 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-.img-fluid {
+.product-home {
     display: block;
     width: 100%;
     height: 300px;
 }
+
 .footer {
-    position: fixed;
+    position: absolute;
+    border-top: 20px;
     left: 0;
-    bottom: 0;
+    bottom: 0 !important;
     width: 100%;
     height: 50px;
     background-color: black;
