@@ -7,3 +7,12 @@ def index(request):
     """ A view to return the index page """
 
     return render(request, 'home/index.html')
+
+
+def about(request):
+    ''' render about page '''
+
+    template = "home/about.html"
+
+    return render(request,
+                  template)
