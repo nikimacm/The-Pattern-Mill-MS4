@@ -123,6 +123,14 @@ a.category-badge > span.badge:hover {
     height: 300px;
 }
 
+.about-info {
+    margin-top: 100px;
+}
+
+.about-img {
+    background-image: ;
+}
+
 .footer {
     position: absolute;
     border-top: 20px;
