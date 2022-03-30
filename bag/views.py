@@ -10,16 +10,16 @@ def view_bag(request):
 
 
 def add_to_bag(request, item_id):
-    """ Add a quantity of the specified product to the shopping bag """
+    """ Add the licence type to the shopping bag """
 
-    quantity = int(request.POST.get('quantity'))
+    licence_type = (request.POST.get('licence_type'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):
-        bag[item_id] += quantity
+        bag[item_id] += licence_type
     else:
-        bag[item_id] = quantity
+        bag[item_id] = licence_type
 
     request.session['bag'] = bag
     print(request.session['bag'])

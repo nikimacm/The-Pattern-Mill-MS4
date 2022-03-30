@@ -8,32 +8,21 @@ def bag_contents(request):
 
     bag_items = []
     total = 0
-    product_count = 0
-    bag = request.session.get('bag', {})
-
-    for item_id, quantity in bag.items():
-        product = get_object_or_404(Product, pk=item_id)
-        total += quantity * product.price
-        product_count += quantity
-        bag_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'product': product,
-        })
+    licence_type = 0
 
     if total < settings.ORDER_DISCOUNT_THRESHOLD:
         discount = total * Decimal(settings.ORDER_DISCOUNT_AMOUNT / 100)
         order_discount_delta = settings.ORDER_DISCOUNT_THRESHOLD - total
     else:
         discount = 10
-        order_discount_delta = 0
-    
+        order_discount_delta = 10
+   
     grand_total = discount + total
-    
+   
     context = {
         'bag_items': bag_items,
         'total': total,
-        'product_count': product_count,
+        'licence_type': licence_type,
         'discount': discount,
         'order_discount_delta': order_discount_delta,
         'order_discount_threshold': settings.ORDER_DISCOUNT_THRESHOLD,
