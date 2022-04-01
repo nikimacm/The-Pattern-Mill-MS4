@@ -1,12 +1,9 @@
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from products.models import Product
+from products.models import Product 
 
 def bag_contents(request):
-
-# Return a dictionary called contexts which we are about to create 
-# This is a contexts processor - makes this dictionary available to all templates in the applicatio
 
     bag_items = []
     total = 0
