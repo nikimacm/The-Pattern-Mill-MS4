@@ -5,16 +5,21 @@ from products.models import Product
 
 def bag_contents(request):
 
+# Return a dictionary called contexts which we are about to create 
+# This is a contexts processor - makes this dictionary available to all templates in the applicatio
+
     bag_items = []
     total = 0
     product_count = 0
     bag = request.session.get('bag', {})
 
-    for item_id, quantity in bag.items():
+    for item_id, item_data in bag.items():
         product = get_object_or_404(Product, pk=item_id)
+        total += item_data * product.price
+        product_count += item_data
         bag_items.append({
             'item_id': item_id,
-            'quantity': quantity,
+            'quantity': item_data,
             'product': product,
         })
 

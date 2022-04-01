@@ -12,14 +12,14 @@ def view_bag(request):
 def add_to_bag(request, item_id):
     """ Add the licence type to the shopping bag """
 
-    licence_type = (request.POST.get('licence_type'))
+    item_data = (request.POST.get('item_data'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):
-        bag[item_id] = licence_type
+        bag[item_id] = item_data
     else:
-        bag[item_id] = licence_type
+        bag[item_id] = item_data
 
     request.session['bag'] = bag
     return redirect(redirect_url)
