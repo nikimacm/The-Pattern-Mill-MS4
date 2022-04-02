@@ -134,8 +134,9 @@
             </div>
         </div>
     </div>
+{% endblock %}
 
-    {% block postloadjs %}
+{% block postloadjs %}
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
