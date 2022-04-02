@@ -20,32 +20,32 @@ def bag_contents(request):
                 'quantity': item_data,
                 'product': product,
             })
-        else:
-            product = get_object_or_404(Product, pk=item_id)
-            for size, quantity in item_data['items_by_size'].items():
-                total += quantity * product.price
-                product_count += quantity
-                bag_items.append({
-                    'item_id': item_id,
-                    'quantity': item_data,
-                    'product': product,
-                    'size': size,
-                })
+        #else:
+            #product = get_object_or_404(Product, pk=item_id)
+            #for size, quantity in item_data['items_by_size'].items():
+                #total += quantity * product.price
+                #product_count += quantity
+                #bag_items.append({
+                    #'item_id': item_id,
+                    #'quantity': item_data,
+                    #'product': product,
+                    #'size': size,
+                #})
 
     if total < settings.ORDER_DISCOUNT_THRESHOLD:
-        discount = total * Decimal(settings.ORDER_DISCOUNT_AMOUNT / 100)
+        delivery = total * Decimal(settings.ORDER_DISCOUNT_AMOUNT / 10)
         order_discount_delta = settings.ORDER_DISCOUNT_THRESHOLD - total
     else:
-        discount = 10
-        order_discount_delta = 10
+        delivery = 0
+        order_discount_delta = 0
  
-    grand_total = discount + total
+    grand_total = delivery + total
    
     context = {
         'bag_items': bag_items,
         'total': total,
         'product_count': product_count,
-        'discount': discount,
+        'delivery': delivery,
         'order_discount_delta': order_discount_delta,
         'order_discount_threshold': settings.ORDER_DISCOUNT_THRESHOLD,
         'grand_total': grand_total,
