@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-nhpqccex8-)+8sxzg^s272cqapav^#p6u_x)b_qqbwapweb*%(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nikimac-the-pattern-mill-ms4.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['the-pattern-mill-ms4.herokuapp.com', 'localhost']
 
 
 # Application definition
