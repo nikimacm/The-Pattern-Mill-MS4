@@ -1,2 +1,1 @@
-
-web: gunicorn the-pattern-mill-ms4.wsgi:application
+web: gunicorn the_pattern_mill.wsgi:application
