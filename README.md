@@ -4,21 +4,7 @@
 
 ### Overview <hr>
 
-The Pattern Mill is a full stack website integrating all skills learned throughout the course
-
-- A title
-- Address of the trail
-- Difficulty level, Easy, moderate or hard
-- Description
-- Directions
-- Photos
-- Maps
-
-The site will also provide a comment section where users can give opinions or tips and advice on the trails, where to eat, sleep nearby etc.
-
-I have created two profiles for testing purposes:
-1. Username:Inesita, Password:inesita
-2. Username:Admin, Password:admin
+E-commerce website for The Pattern Mill. An online store which sells patterns to be used for commercial or personal use. This is my milestone 4 project for Code Institutes Diploma in Full Stack Software Development.
 
 
  [View Live Site Here](https://trailmixers-project3.herokuapp.com/)
