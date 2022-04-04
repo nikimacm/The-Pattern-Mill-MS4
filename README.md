@@ -89,11 +89,7 @@ I have created two profiles for testing purposes:
 
 #### Project Goals 
 
-The goal of this project is to utilize the skills aquired throughout the course so far to build a full-stack site that allows users to manage and share data on hiking trails in Andalucia. 
-
-The site should provide users with information on Andalucian trails and also give the oppportunity to create a community where users can share their experiences.
-
-A possible benefit for the owner of the site could be to obtain revenue from advertising through affiliated links and sponsorship. 
+The goal of this project is to creat a fullstack site 
 
 #### User Goals
 
