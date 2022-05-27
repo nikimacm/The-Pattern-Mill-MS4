@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '$&1y68a72is-u1b(!3wnjuule!9wgeg1uz$gbtvl^3&c3w8(ij'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['the-pattern-mill-ms4.herokuapp.com', 'localhost']
 
