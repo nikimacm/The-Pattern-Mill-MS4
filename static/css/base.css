@@ -43,6 +43,10 @@ body {
     transform: translateY(-50%)
 }
 
+.about-info {
+    margin-top: 200px;
+}
+
 .btn-black {
     background: black;
     color: white;
@@ -121,10 +125,6 @@ a.category-badge > span.badge:hover {
     display: block;
     width: 100%;
     height: 300px;
-}
-
-.about-info {
-    margin-top: 100px;
 }
 
 .footer {
