@@ -27,6 +27,7 @@
                     {% endif %}
                 </div>
             </div>
+            
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
@@ -108,6 +109,44 @@
                     </form>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div style="margin: 5px padding:2px">
+                   Add Comments ({{ num_comments }})
+                   <br>
+                   <hr>
+                   
+       
+                   {% if not product.comments.all %}
+       
+                       <p>Be the first to leave a comment</p>
+                      <p><a class="btn btn-primary" href="">  Add Comment </a></p>
+       
+                   {% else %}
+       
+                       {% for comment in product.comments.all %}
+       
+                           <h5><strong>{{ comment.commenter_name }}</strong></h5>
+                           <p>{{ comment.comment_body }}</p>
+                           <p><small>{{ comment.date_added }}</small></p>
+       
+                           {% if request.user.username == comment.commenter_name %}
+       
+                               <p><a class="btn btn-primary" href="">  Add Comment </a></p>
+                               <p><a class="btn btn-danger" href="">  Delete Comment </a></p>
+                             
+                             
+                           {% endif %}
+                           
+                           
+       
+                       {% endfor %}
+       
+                   {% endif %}
+       
+           
+       
+                </div>
+             </div>
         </div>
     </div>
 {% endblock %}
