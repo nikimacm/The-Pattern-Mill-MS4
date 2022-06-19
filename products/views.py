@@ -146,7 +146,7 @@ def add_comment(request, pk):
         'form': form
     }
 
-    return render(request, 'add_comment.html', context)
+    return render(request, 'products/add_comment.html', context)
 
 
 def delete_comment(request, pk):

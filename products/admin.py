@@ -24,15 +24,6 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-class CommentAdmin(admin.ModelAdmin):
-    list_display = (
-        'product',
-        'commenter_name',
-        'comment_body',
-        'date_added',
-    )
-
-
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Comment, CommentAdmin)
+admin.site.register(Comment)
