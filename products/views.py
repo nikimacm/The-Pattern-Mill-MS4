@@ -3,8 +3,8 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Comment
+from .forms import ProductForm, CommentForm
 
 # Create your views here.
 
@@ -121,3 +121,36 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def add_comment(request, pk):
+    product = Product.objects.get(id=pk)
+
+    form = CommentForm(instance=product)
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=product)
+        if form.is_valid():
+            name = request.user.username
+            body = form.cleaned_data['comment_body']
+            c = Comment(product=product, commenter_name=name, comment_body=body, date_added=datetime.now())
+            c.save()
+            return redirect('products')
+        else:
+            print('form is invalid')    
+    else:
+        form = CommentForm()    
+
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'add_comment.html', context)
+
+
+def delete_comment(request, pk):
+    comment = Comment.objects.filter(product=pk).last()
+    product_id = comment.product.id
+    comment.delete()
+    return redirect(reverse('product', args=[product_id]))

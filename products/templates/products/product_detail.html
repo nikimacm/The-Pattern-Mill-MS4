@@ -119,7 +119,8 @@
                    {% if not product.comments.all %}
        
                        <p>Be the first to leave a comment</p>
-                      <p><a class="btn btn-primary" href="">  Add Comment </a></p>
+                       <p><a class="btn btn-primary" href="{% url 'add-comment' product.id %}">  Add Comment </a></p>
+                        <p><a class="btn btn-danger" href="{% url 'delete-comment' product.id %}">  Delete Comment </a></p>
        
                    {% else %}
        
@@ -131,8 +132,8 @@
        
                            {% if request.user.username == comment.commenter_name %}
        
-                               <p><a class="btn btn-primary" href="">  Add Comment </a></p>
-                               <p><a class="btn btn-danger" href="">  Delete Comment </a></p>
+                           <p><a class="btn btn-primary" href="{% url 'add-comment' product.id %}">  Add Comment </a></p>
+                           <p><a class="btn btn-danger" href="{% url 'delete-comment' product.id %}">  Delete Comment </a></p>
                              
                              
                            {% endif %}
@@ -146,7 +147,7 @@
            
        
                 </div>
-             </div>
+            </div>
         </div>
     </div>
 {% endblock %}
