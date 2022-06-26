@@ -79,7 +79,7 @@ The goal of this project was to create a a full-stack site based around business
  
 ### UX <hr>
 
-## Strategy 
+## Strategy  <hr>
 
 The Pattern Mill is an online store where the customer can successfully purchase JPEG or PSD files of their chosen pattern and have it emailed directly to them. The customer can also request a hard copy or catalogue to be sent to their home or business address. Registered users get a record of their order history and the ability to comment on patterns. This means they can ask questions of the site owner or other customers who have purchased specific designs.
 
@@ -119,7 +119,7 @@ As a user of The Pattern Mill site my requirements and expectations are:
 * The ability to make a decision based on site content.
 * A means to contact business owners directly for a more personal experience.
 
-## Scope
+## Scope <hr>
 
 The site is designed with simplicity and ease of use in mind. Users can easily navigate the site without any distracting influences and can find the style, colour, design or category of pattern without complications. The nav bar and footer are repeated throughout every page to ensure users can navigate to whichever page they want or click onto the social media links on the footer to find more information or contact the site owner.
 
@@ -166,7 +166,135 @@ The site is designed with simplicity and ease of use in mind. Users can easily n
   * CRUD functionalities for orders
 
 
+## Structure <hr>
+
+  
+  ![](/readme/images/sitemap_ms4.png)
+
+  The structure of the site .......
+
+## The Skeleton Plane
+
+### Wireframes
+
+Since this is a big project, I have decided to put wireframes in separate file.
+
+You can access them [here](/readme/wireframes/wireframes.md).
+
+### Database Design
+
+As Django works with SQL databases by default, I was using SQLite in development. Heroku, however, provides a PostgreSQL database for deployment
+
+### User Model
+
+The User model utilized for this project is the standard one provided by `django.contrib.auth.models`
+
+### Profiles App
+
+| Name | Database Key | Field Type | Type Validation |
+| :-------------: |:----------------:| :--------------: | :---------: |
+|User | user |	OneToOneField 'User'| on_delete=models.CASCADE
+|Default Phone Number |	default_phone_number | CharField | max_length=20, null=True, blank=True
+|Default Country | default_country | CountryField | blank_label='country', null=True, blank=True
+|Default Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
+|Default Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True
+|Default Street Address1 | default_street_address1 | CharField | max_length=80, null=True, blank=True
+|Default Street Address2 | default_street_address2 | CharField | max_length=80, null=True, blank=True
+
+### Products App
+
+`Category` model
+
+| Name | Database Key | Field Type | Type Validation |
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Name | name | CharField | max_length=254
+|Friendly Name | friendly_name | CharField | max_length=254, null=True, blank=True
+
+`Product` model
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Product id | id | primary_key=True | AutoField
+|Name | name | default='', max_length=254 | CharField
+|SKU | sku | max_length=254, null=True, blank=True | CharField
+|Description | content | blank=False | TextField
+|Price | price | max_digits=6, decimal_places=2 | DecimalField
+|Image| image| blank=False | ImageField
+|Rating | rating | blank=True | DecimalField
+
+### Review
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|User | user | on_delete=models.CASCADE | ForeignKey
+|Product| product | Product, related_name="review" | ForeignKey
+|Title | title | max_length=50 | CharField
+|Description| description | description | TextField
+|Rating | rating | choices=RATE | IntegerField
+|Upvotes | upvotes | default=0 | IntegerField
+|Downvotes| downvotes | default=0 | IntegerField
+|date_posted | date_posted | auto_now_add=True| DateTimeField
+
+
+### Post
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|id | id | primary_key=True | AutoField
+|Category| category | on_delete=models.CASCADE | ForeignKey
+|Title | title | max_length=100 | CharField
+|Slug | slug | max_length=200, unique=True | SlugField
+|Intro | intro | validators=[MinLengthValidator(100)], max_length=400 | TextField
+|Article | article | validators=[MinLengthValidator(250)]| TextField
+|Image| image | blank=True | ImageField
+|Date_added| date_added| auto_now_add=True | DateTimeField
+
+### Category_post
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Title | title | max_length=100 | CharField
+|Slug | slug | max_length=200, unique=True | SlugField
+
+### Comment
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Post | post | pon_delete=models.CASCADE | ForeignKey
+|Name | name | max_length=255  | CharField
+|Article | article | blank=False  | TextField
+|Date| date_added | auto_now_add=True | DateTimeField
+
+### Order
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Order id | id | primary_key=True | AutoField
+|User | user | User, on_delete=models.CASCADE, related_name="orders" | ForeignKey(User)
+|Full name | full_name | max_length=50 | CharField
+|Phone number | phone_number | max_length=20, blank=False | CharField
+|Country | country | max_length=40, blank=False | CharField
+|Postcode | postcode| max_length=40, blank=True | CharField
+|Town or City | town_or_city | max_length=40, blank=False | CharField
+|Street address 1 | street_address1 | max_length=40, blank=False | CharField
+|Street address 2 | street_address2 | max_length=40, blank=False | CharField
+|County | county | max_length=40, blank=False | CharField
+|Date | date | default=timezone.now | DateField
+|Total price | total_price | max_digits=100, decimal_places=2, default=0.00 | DecimalField
+
+### OrderLineItem
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Order Line Item id | id | primary_key=True | AutoField
+|Order | order | Order, related_name="orderline", null=False | ForeignKey
+|Product | product | Product, null=False | ForeignKey
+|Quantity | quantity | blank=False | IntegerField
+
+
 ### DESIGN <hr>
+
+
 
 #### DESIGN CHOICES
 
@@ -178,8 +306,9 @@ The site is designed with simplicity and ease of use in mind. Users can easily n
 
 
 
-- ![#00695c](https://via.placeholder.com/15/00695c/000000?text=+) `#00695c`
-- ![#3e2723](https://via.placeholder.com/15/3e2723/000000?text=+) `#3e2723`
+- ![#cf507b](https://via.placeholder.com/15/cf507b/000000?text=+) `#cf507b`
+- ![#000000](https://via.placeholder.com/15/000000/ffffff?text=+) `#000000`
+- ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
 
 
 #### FONTS
