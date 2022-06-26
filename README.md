@@ -1,11 +1,14 @@
-![Website Mokup]()
 
-# The Pattern Mill
+# The Pattern Mill - E-Commerce Web App.
+
+
+
+![](/readme/images/ms4_mokup.png)
 
 ### Overview <hr>
 
 
-[View Live Site Here](https://the-pattern-mill-ms4.herokuapp.com//)
+[View Live Site Here](https://the-pattern-mill-ms4.herokuapp.com/)
 
 
 ## Contents
