@@ -79,7 +79,7 @@ The goal of this project was to create a a full-stack site based around business
  
 ### UX <hr>
 
-#### Strategy 
+## Strategy 
 
 The Pattern Mill is an online store where the customer can successfully purchase JPEG or PSD files of their chosen pattern and have it emailed directly to them. The customer can also request a hard copy or catalogue to be sent to their home or business address. Registered users get a record of their order history and the ability to comment on patterns. This means they can ask questions of the site owner or other customers who have purchased specific designs.
 
