@@ -18,8 +18,7 @@ The goal of this project was to create a a full-stack site based around business
 
 * [UX](#ux)
     * [Strategy](#strategy)
-    * [User Goals](#user-goals)
-    * [User Stories](#user-stories)
+    * [Site User Goals](#site-user-goals)
     * [Site Owner Goals](#site-owner-goals)
     * [User requirements and expectations](#User-requirements-and-expectations)
 
@@ -86,7 +85,7 @@ The Pattern Mill is an online store where the customer can successfully purchase
 
 #### Site Owner Goals
 
-As The Pattern Mill site owner...
+As The Pattern Mill site owner:
 
 * Design a site which represents the services offered and will appeal to the target market using appropriate colour schemes, imagery, typography and useful information.
 * Ensure the site is easy to navigate and all information can be found by visitors within seconds.
@@ -96,7 +95,7 @@ As The Pattern Mill site owner...
 
 #### Site User Goals
 
-As The Pattern Mill customer...
+As The Pattern Mill customer:
 
 * As a potential customer, I would like to find all the info I need without complications.
 * I want to easily navigate the site so that I can find content quickly with ease on any device.
@@ -110,6 +109,62 @@ As The Pattern Mill customer...
 * I want to be able to comment and read comments below patterns and ask questions if needed.
 
 #### User Requirements and expectations
+
+As a user of The Pattern Mill site my requirements and expectations are:
+
+* A fast loading time.
+* A website which is clear and easy to navigate.
+* Recognisable format, no surprises.
+* A well designed, aesthetically pleasing user interface.
+* The ability to make a decision based on site content.
+* A means to contact business owners directly for a more personal experience.
+
+## Scope
+
+The site is designed with simplicity and ease of use in mind. Users can easily navigate the site without any distracting influences and can find the style, colour, design or category of pattern without complications. The nav bar and footer are repeated throughout every page to ensure users can navigate to whichever page they want or click onto the social media links on the footer to find more information or contact the site owner.
+
+### Features
+
+1. Content requirements
+* Home page with browse our catalogue button to invite customers into the store to directly view all patterns.
+* Navbar/About: Information about The Pattern Mill
+* Navbar/Patterns: Dropdown with patterns filtered by price, rating, categories and the all patterns option.
+* Navbar/Categories: Dropdown with patterns categorized by abstract, floral, nature, geometric and quirky.
+* Navbar/Product Placement (to be implemented in the future): The ability to view prototypes of patterns printed on different mediums.
+* Product details: Image, price, rating, description and comments.
+* Shopping cart:
+  * what products have been added to cart - quantity - total price and if there is a discount added
+  * Total amount of the whole shopping cart and discount (if applicable).
+* Account information:
+  * My profile
+  * My saved addresses
+  * My order history
+
+2. Functionality requirements
+* User account:
+  * Sign up / Log in / Log out with confirmation email sent.
+  * Edit profile: personal information / delivery address
+  * Order history
+* Online shop:
+  * Product filtering by categories
+  * Product filtering by price
+  * Product filtering by name (A-Z)
+  * Product filtering by rating
+  * Search for a product by name or description
+  * Product showcase page with thumbnail images showing design name, designer, price, category and rating.
+  * Product's details page with full image and more descriptions
+* Shopping cart, create an order and payment:
+  * View / Edit existing product's quantity / Delete existing product on shopping cart
+  * Secured online payment with card through Stripe API
+  * Order confirmation email
+* Toast messages to inform users if their actions have succeeded or failed
+* Admin and store management:
+  * CRUD functionalities for product categories
+  * CRUD functionalities for prices
+  * CRUD functionalities for product descriptions and information
+  * CRUD functionalities for users
+  * CRUD functionalities for orders
+
 
 ### DESIGN <hr>
 
