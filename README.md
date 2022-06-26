@@ -5,17 +5,19 @@
 
 ![](/readme/images/ms4_mokup.png)
 
-### Overview <hr>
+### Project Overview <hr>
 
+Full Stack Frameworks with Django Project for Code Institute.
+
+The goal of this project was to create a a full-stack site based around business logic used to control a centrally-owned dataset. The Pattern Mill is an e-commerce site which sells patterns which can be printed on anything from textiles to stationary or even canvas. Customers can purchase a pattern through Stripe after registering for an account and logging in. They can choose between personal use which is one time only or commercial use where they can use the pattern for commercial purposes.The admin can manage the site through the web app or through the Django admin site by adding, deleting products, updating price and commenting on each product.
 
 [View Live Site Here](https://the-pattern-mill-ms4.herokuapp.com/)
 
 
 ## Contents
 
-[Overview](#overview)
 * [UX](#ux)
-    * [Project Goals](#project-goals)
+    * [Strategy](#strategy)
     * [User Goals](#user-goals)
     * [User Stories](#user-stories)
     * [Site Owner Goals](#site-owner-goals)
@@ -78,26 +80,36 @@
  
 ### UX <hr>
 
-#### Project Goals 
+#### Strategy 
 
-The goal of this project is to create a fullstack site 
-
-#### User Goals
-
-1. 
-
-#### User Stories
-
-8. 
+The Pattern Mill is an online store where the customer can successfully purchase JPEG or PSD files of their chosen pattern and have it emailed directly to them. The customer can also request a hard copy or catalogue to be sent to their home or business address. Registered users get a record of their order history and the ability to comment on patterns. This means they can ask questions of the site owner or other customers who have purchased specific designs.
 
 #### Site Owner Goals
 
-15.
+As The Pattern Mill site owner...
+
+* Design a site which represents the services offered and will appeal to the target market using appropriate colour schemes, imagery, typography and useful information.
+* Ensure the site is easy to navigate and all information can be found by visitors within seconds.
+* Increase website traffic from the target audience using tools such as google analytics, blogging and social media.
+* Produce a site which is easily accessible on all sizes, mobile devices and browsers.
+* A means to contact business owners directly for a more personal experience.
+
+#### Site User Goals
+
+As The Pattern Mill customer...
+
+* As a potential customer, I would like to find all the info I need without complications.
+* I want to easily navigate the site so that I can find content quickly with ease on any device.
+* I want to be able to filter my product search by price, rating and categories.
+* A quick search bar is imortant for me to help me find a pattern in the colour and style I want.
+* I want to easily view the total of my purchases at any time and have the option to update or delete.
+* I want to successfully register for an account and proceed to log in.
+* I want to access to my order history.
+* I do not want to re-enter my personal and delivery details for every order.
+* I want to be able to contact the store of the website incase I have any issues or questons.
+* I want to be able to comment and read comments below patterns and ask questions if needed.
 
 #### User Requirements and expectations
-
-21. 
-
 
 ### DESIGN <hr>
 
