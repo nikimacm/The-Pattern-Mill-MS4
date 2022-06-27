@@ -3,7 +3,7 @@
 
 
 
-![](/readme/images/ms4_mokup.png)
+![Mokup](/readme/images/ms4_mokup.png)
 
 ### Project Overview <hr>
 
@@ -195,11 +195,11 @@ The User model utilized for this project is the standard one provided by `django
 | :-------------: |:----------------:| :--------------: | :---------: |
 |User | user |	OneToOneField 'User'| on_delete=models.CASCADE
 |Default Phone Number |	default_phone_number | CharField | max_length=20, null=True, blank=True
-|Default Country | default_country | CountryField | blank_label='country', null=True, blank=True
-|Default Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
-|Default Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True
 |Default Street Address1 | default_street_address1 | CharField | max_length=80, null=True, blank=True
 |Default Street Address2 | default_street_address2 | CharField | max_length=80, null=True, blank=True
+|Default Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True
+|Default Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
+|Default Country | default_country | CountryField | blank_label='country', null=True, blank=True
 
 ### Products App
 
@@ -214,47 +214,16 @@ The User model utilized for this project is the standard one provided by `django
 
 | Name | Database Key | Validation | Field Type|
 | :-------------: |:----------------:| :--------------: | :---------: |
-|Product id | id | primary_key=True | AutoField
-|Name | name | default='', max_length=254 | CharField
+|Category | category | null=True, blank=True, on_delete=models.SET_NULL | ForeignKey
 |SKU | sku | max_length=254, null=True, blank=True | CharField
+|Name | name | default='', max_length=254 | CharField
 |Description | content | blank=False | TextField
+|Has_sizes| has_sizes | default='False', | blank=True | BooleanField
 |Price | price | max_digits=6, decimal_places=2 | DecimalField
-|Image| image| blank=False | ImageField
 |Rating | rating | blank=True | DecimalField
+|Image_url| image_url | max_length=1024, null=True, blank=True | UrlField
+|Image| image| blank=False | ImageField
 
-### Review
-
-| Name | Database Key | Validation | Field Type|
-| :-------------: |:----------------:| :--------------: | :---------: |
-|User | user | on_delete=models.CASCADE | ForeignKey
-|Product| product | Product, related_name="review" | ForeignKey
-|Title | title | max_length=50 | CharField
-|Description| description | description | TextField
-|Rating | rating | choices=RATE | IntegerField
-|Upvotes | upvotes | default=0 | IntegerField
-|Downvotes| downvotes | default=0 | IntegerField
-|date_posted | date_posted | auto_now_add=True| DateTimeField
-
-
-### Post
-
-| Name | Database Key | Validation | Field Type|
-| :-------------: |:----------------:| :--------------: | :---------: |
-|id | id | primary_key=True | AutoField
-|Category| category | on_delete=models.CASCADE | ForeignKey
-|Title | title | max_length=100 | CharField
-|Slug | slug | max_length=200, unique=True | SlugField
-|Intro | intro | validators=[MinLengthValidator(100)], max_length=400 | TextField
-|Article | article | validators=[MinLengthValidator(250)]| TextField
-|Image| image | blank=True | ImageField
-|Date_added| date_added| auto_now_add=True | DateTimeField
-
-### Category_post
-
-| Name | Database Key | Validation | Field Type|
-| :-------------: |:----------------:| :--------------: | :---------: |
-|Title | title | max_length=100 | CharField
-|Slug | slug | max_length=200, unique=True | SlugField
 
 ### Comment
 
@@ -265,6 +234,9 @@ The User model utilized for this project is the standard one provided by `django
 |Article | article | blank=False  | TextField
 |Date| date_added | auto_now_add=True | DateTimeField
 
+
+### Checkout App
+
 ### Order
 
 | Name | Database Key | Validation | Field Type|
@@ -272,6 +244,7 @@ The User model utilized for this project is the standard one provided by `django
 |Order id | id | primary_key=True | AutoField
 |User | user | User, on_delete=models.CASCADE, related_name="orders" | ForeignKey(User)
 |Full name | full_name | max_length=50 | CharField
+|Email | email | max_length=254, null=False, blank=False | EmailField
 |Phone number | phone_number | max_length=20, blank=False | CharField
 |Country | country | max_length=40, blank=False | CharField
 |Postcode | postcode| max_length=40, blank=True | CharField
@@ -280,16 +253,22 @@ The User model utilized for this project is the standard one provided by `django
 |Street address 2 | street_address2 | max_length=40, blank=False | CharField
 |County | county | max_length=40, blank=False | CharField
 |Date | date | default=timezone.now | DateField
-|Total price | total_price | max_digits=100, decimal_places=2, default=0.00 | DecimalField
+|Delivery Cost| delivery_cost | (max_digits=6, decimal_places=2, null=False, default=0 | DecimalField
+|Order Total | order_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+|Grand Total | grand_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+|Original Bag | original_bag | null=False, blank=False, default='' | TextField
+|Stripe PID | stripe_pid | max_length=254, null=False, blank=False, default='' | CharField
 
 ### OrderLineItem
 
 | Name | Database Key | Validation | Field Type|
 | :-------------: |:----------------:| :--------------: | :---------: |
 |Order Line Item id | id | primary_key=True | AutoField
-|Order | order | Order, related_name="orderline", null=False | ForeignKey
-|Product | product | Product, null=False | ForeignKey
+|Order | order | Order, null=False, blank=False, on_delete=models.CASCADE, | ForeignKey
+|Product | product | Product, null=False, blank=False | ForeignKey
+|Product Size | product_size | max_length=50, null=True, blank=True | CharField
 |Quantity | quantity | blank=False | IntegerField
+|Lineitem Total | lineitem_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=Falsee | DecimalField
 
 
 ### DESIGN <hr>
