@@ -361,10 +361,74 @@ Validation tools used:
 ### Validation Results
 
 
-### BUGS FOUND AND THEIR FIXES <hr>
+# Deployment
 
-    
-### Deployment
+## AWS S3
+Created a new Amazon account and connect to amazon service AWS3 account are cloud based serve where the project media and staicfiles will be stored unto. Firstly, locate S3 on amazon service and create a bucket. While creating the bucket on S3, the note that public access must be all switched off to allow access for users.
+
+Once the bucket has been created, we now can now click on its properties and enable the Static Website Hosting option, so it can serve the purpose of hosting our static files, you will need to imput an index.html and error.html before saving. Then we go into the created bucket Permissions and click into CORS configuration, this part already has a prefilled default config, All that is needed is just to write the default code and save the config.
+
+Next, go into the bucket policy to allows access to the contents across all web and inside this put  some code including arn address displayed at the top of the heading. Then go into amazon IAM to allow identity and access management of our stored files and folder. In the IAM service, add a new group for the application and then set the policies to ALL. It generates a downlaodable zip file containing ID and KEY to be used for the newly added group. This ID and KEY as to be stored in an environment variable.
+
+This then allows us to into our terminal window and install some settings Boto3 Django Storages
+
+The Django Storages is passed into the installed apps in settings and also a custom_storage file is created to store credentials in environment variable. And once everything looks fine python3 manage.py collectstatic can be run. This will collect all the static files in our app including any changes that is made. N.B this command has to be run in the development(local) environment each time a change is been made in the static files/folder And your folder and files should display in your AWS S3 BUCKETS
+
+## Heroku Deployment 
+
+#### Create application:
+
+1. Navigate to Heroku.com and login.
+2. Click on the new button.
+3. Select create new app.
+4. Enter the app name.
+5. Select region.
+
+#### Set up connection to Github Repository:
+
+1. Click the deploy tab and select GitHub - Connect to GitHub.
+2. A prompt to find a github repository to connect to will then be displayed.
+3. Enter the repository name for the project and click search.
+4. Once the repo has been found, click the connect button.
+
+#### Add PostgreSQL Database:
+
+1. Click the resources tab.
+2. Under Add-ons seach for Heroku Postgres and then click on it when it appears.
+3. Select Plan name Hobby Dev - Free and then click Submit Order Form.
+
+#### Set environment variables:
+
+1. Click on the settings tab and then click reveal config vars.
+2. Variables added: 
+    * AWS_ACCESS_KEY_ID 
+    * AWS_SECRET_ACCESS_KEY 
+    * DATABASE_URL 
+    * EMAIL_HOST_PASS 
+    * EMAIL_HOST_USER
+    * SECRET_KEY 
+    * STRIPE_PRICE_ID 
+    * STRIPE_PUBLIC_KEY 
+    * STRIPE_SECRET_KEY 
+    * STRIPE_WH_SECRET 
+    * USE_AWS 
+
+#### Enable automatic deployment:
+
+1. Click the Deploy tab
+1. In the Automatic deploys section, choose the branch you want to deploy from then click Enable Automation Deploys.
+
+## Local Deployment
+
+1. Navigate to the GitHub Repository.
+2. Click the Code drop down menu.
+3. Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL from the HTTPS dialogue box.
+4. Open your developement editor of choice and open a terminal window in a directory of your choice.
+5. Use the git clone command in terminal followed by the copied git URL.
+6. A clone of the project will be created locally on your machine.
+
+Once the project has been loaded into an IDE of choice, run the following command in the shell to install all the required packages: pip install -r requirements.txt
+
 
 ## Project creation
 
@@ -377,8 +441,4 @@ Validation tools used:
 
 I relied heavily on code used in the Code Institutes tutorials to help me with this project, especially Code Institutes Boutique ADO project. I used these tutorials to guide me through the process of creating this site and all the functionality needed. I ammended the code to suit my own project.
 
-
-#### Images
-
- 
  ### ACKNOWLEDGEMENTS<hr><hr>
