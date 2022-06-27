@@ -332,7 +332,9 @@ Languages used:
     - **JS Hint** For Javascript code valuation
 
 
-### TESTING <hr>
+# Testing
+
+**Testing section is located [here](/readme/testing/testing.md)**
 
 ### Performance
 
