@@ -20,53 +20,28 @@ The goal of this project was to create a a full-stack site based around business
     * [Strategy](#strategy)
     * [Site User Goals](#site-user-goals)
     * [Site Owner Goals](#site-owner-goals)
-    * [User requirements and expectations](#User-requirements-and-expectations)
+    * [User requirements and expectations](#user-requirements-and-expectations)
+
+    * [Scope](#scope)
+    * [Features](#features)
+    
+    * [Structure](#site-owner-goals)
+    
+    * [Skeleton Plane](#the-skeleton-plane)
+    * [Wireframes](#wireframes)
+
+    * [Database Design](#database-design)
+    * [User Model](#user-model)
+    * [Profiles App](#profiles-app)
+    * [Checkout App](#checkout-app)
 
 * [DESIGN](#design)
     * [Design Choices](#design-choices)
     * [Colors](#colors)
     * [Fonts](#fonts)
-    * [Structure](#structure)
-
-* [WIREFRAMES](#wireframes)
-    
-#### Mobile
-
-* [Home](#)
-* [Get_started](#)
-* [Sign_in](#)
-* [Sign_up](#)
-* [Add](#)
-* [Member_page](#)
-* [Trail_data](#)
-
-#### Desktop
-
-* [home](#)
-* [browse_catalogue](#)
-* [Sign_in](#)
-* [Sign_up](#)
-* [catagories_pages](#)
-* [checkout](#)
-* [profile](#)
-
+    * [Images](#itructure)
 
 * [TECHNOLOGIES USED](#technologies)
-
-    * [Github](#github)
-    * [Gitpod](#gitpod)
-    * [Google Fonts](#google-fonts)
-    * [Font Awesome](#font-awesome)
-    * [Bootstrap CDN](#bootstrap)
-    * [jQuery](#jquery)
-    * [Popper.js](#popper.js)
-    * [WAVE](#wave)
-    * [W3 HTML](#w3-html)
-    * [Jigsaw CSS](#jigsaw-css)
-    * [Balsamic](#balsamic)
-    * [HTML Beautifier](#html-beautyfier)
-    * [django](#html-beautyfier)
-    * [javascript](#html-beautyfier)
 
 * [TESTING](#testing)
 
@@ -175,21 +150,23 @@ The site is designed with simplicity and ease of use in mind. Users can easily n
 
 ## The Skeleton Plane
 
-### Wireframes
+### Wireframes <hr>
 
 Since this is a big project, I have decided to put wireframes in separate file.
 
 You can access them [here](/readme/wireframes/wireframes.md).
 
-### Database Design
+### Database Design <hr>
 
 As Django works with SQL databases by default, I was using SQLite in development. Heroku, however, provides a PostgreSQL database for deployment
+
 
 ### User Model
 
 The User model utilized for this project is the standard one provided by `django.contrib.auth.models`
 
-### Profiles App
+
+### Profiles App <hr>
 
 | Name | Database Key | Field Type | Type Validation |
 | :-------------: |:----------------:| :--------------: | :---------: |
@@ -201,7 +178,9 @@ The User model utilized for this project is the standard one provided by `django
 |Default Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
 |Default Country | default_country | CountryField | blank_label='country', null=True, blank=True
 
-### Products App
+
+### Products App <hr>
+
 
 `Category` model
 
@@ -209,6 +188,7 @@ The User model utilized for this project is the standard one provided by `django
 | :-------------: |:----------------:| :--------------: | :---------: |
 |Name | name | CharField | max_length=254
 |Friendly Name | friendly_name | CharField | max_length=254, null=True, blank=True
+
 
 `Product` model
 
@@ -225,7 +205,7 @@ The User model utilized for this project is the standard one provided by `django
 |Image| image| blank=False | ImageField
 
 
-### Comment
+`Comment` model
 
 | Name | Database Key | Validation | Field Type|
 | :-------------: |:----------------:| :--------------: | :---------: |
@@ -235,9 +215,10 @@ The User model utilized for this project is the standard one provided by `django
 |Date| date_added | auto_now_add=True | DateTimeField
 
 
-### Checkout App
+### Checkout App <hr>
 
-### Order
+
+`Order` model
 
 | Name | Database Key | Validation | Field Type|
 | :-------------: |:----------------:| :--------------: | :---------: |
@@ -259,7 +240,8 @@ The User model utilized for this project is the standard one provided by `django
 |Original Bag | original_bag | null=False, blank=False, default='' | TextField
 |Stripe PID | stripe_pid | max_length=254, null=False, blank=False, default='' | CharField
 
-### OrderLineItem
+
+`Order Line Item` model
 
 | Name | Database Key | Validation | Field Type|
 | :-------------: |:----------------:| :--------------: | :---------: |
@@ -274,48 +256,43 @@ The User model utilized for this project is the standard one provided by `django
 ### DESIGN <hr>
 
 
+The fact that The Pattern Mill is a site showcasing patterns and designs, I decided to let these images bring life to the page while using black typograpy and white space throughout to create a clean crisp site with priority on the patterns. The landing page has a very bright pink hero image of flamingos with a black button inviting users to browse the catalogue, while the navbar, footer and store title are all black and white. It was created like this to ensure ease of navigation and a simple and elegant site.
+
 
 #### DESIGN CHOICES
 
 
 
-
 #### COLOURS
-
-
-
 
 - ![#cf507b](https://via.placeholder.com/15/cf507b/000000?text=+) `#cf507b`
 - ![#000000](https://via.placeholder.com/15/000000/ffffff?text=+) `#000000`
 - ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
 
 
+
 #### FONTS
 
+Viaoda Libre is the main font used throughout the site. I chose it for it's traditional design which has a modern feel to it. I wanted the site to feel like a gallery, so the incorporation of traditional and modern together work well for this type of store.
 
 
 #### IMAGES
 
 
-
-### WIREFRAMES <hr>
-
-
-#### Mobile
+I download all the images used throughout the site from Unsplash
 
 
+[View Unsplash Site Here](https://unsplash.com/)
 
-#### Desktop
+
+and Pexels
+
+
+[View Pexels Site Here](https://www.pexels.com/)
 
 
 
 ### FEATURES <hr>
-
-#### Feature 1: Home Page
-
-
-### DATABASE <hr>
-
 
 ### TECHNOLOGIES USED <hr>
 
