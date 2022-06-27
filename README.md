@@ -253,13 +253,13 @@ The User model utilized for this project is the standard one provided by `django
 |Lineitem Total | lineitem_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=Falsee | DecimalField
 
 
-### DESIGN <hr>
+## DESIGN <hr>
 
 
 The fact that The Pattern Mill is a site showcasing patterns and designs, I decided to let these images bring life to the page while using black typograpy and white space throughout to create a clean crisp site with priority on the patterns. The landing page has a very bright pink hero image of flamingos with a black button inviting users to browse the catalogue, while the navbar, footer and store title are all black and white. It was created like this to ensure ease of navigation and a simple and elegant site.
 
 
-#### DESIGN CHOICES
+### DESIGN CHOICES
 
 
 
@@ -292,47 +292,45 @@ and Pexels
 
 
 
-### FEATURES <hr>
-
-### TECHNOLOGIES USED <hr>
-
-Languages used:
-
-* HTML 5
-* CSS
-* Javascript
-* JQuery
-* JQuery
-
-- [Gitpod](https://gitpod.io) 
-    - Used **Gitpod** as my open source platform.
-- [Github](https://github.com/) 
-    - Used **Github** as my code hosting platform
-- [Google Fonts](https://fonts.google.com/)
-    - This project uses **Google fonts** to style the website fonts.
-- [Materialize](https://www.https://materializecss.com/.com/)
-    - This project uses **Bootstrap4** to simplify the structure of the website and make the website responsive
-    - This project also uses BootstrapCDN to provide icons from [FontAwesome](https://www.bootstrapcdn.com/fontawesome/)
-
-- [jQuery](https://jquery.com/)
-    - This project uses **jQuery** to reference Javascript needed for the responsive navbar.
-- [Popper.js](https://popper.js.org/)
-    - **Popper.js** was used to reference Javascript needed for the responsive navbar.
-- [WAVE](https://wave.webaim.org)
-    - Used **WAVE** to evaluate my code to ensure the content is fully accessable to individuals with disabilities.
-- [W3 HTML](https://validator.w3.org/)
-    - Used **W3 HTMLs** for HTML code valuation
-- [Jigsaw CSS](https://jigsaw.w3.org/css-validator/)
-    - Used **Jigsaw CSS** to Validate CSS Code
-- [Balsamic](https://balsamiq.com/)
-    - Used **Balsamic** to create [WIREFRAMES](#wireframes)
-- [PEP8 Online](http://pep8online.com/)
-    - **PEP8 Online** For Python code valuation
-- [JS Hint](https://jshint.com/)
-    - **JS Hint** For Javascript code valuation
+## FEATURES <hr>
 
 
-# Testing
+## TECHNOLOGIES USED <hr>
+
+The website is designed using following technologies:
+
+### Programming languages
+
+* HTML - the project used HTML to define structure and layout of the web page;
+* CSS - the project used CSS stylesheets to specify style of the web document elements;
+* JavaScript - the project used JavaScript to implement Stripe, EmailJS and custom Javascript.
+* Python - the project back-end functions are written using Python.
+
+### Libraries
+
+* [Font Awesome](https://fontawesome.com/v4.7.0/) - Font Awesome icons were used throughout the web-site.
+* [jQuery](https://jquery.com/) - is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation.
+
+### Frameworks & Extensions
+
+* [Django](https://www.djangoproject.com/) – Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+* [Bootstrap](https://getbootstrap.com/) – Bootstrap is a web framework that focuses on simplifying the development of informative web pages.
+* [EmailJS](https://www.emailjs.com/) – Service that helps sending emails using client side technologies only. It only requires to connect EmailJS to one of the supported email services, create an email template, and use their Javascript library to trigger an email.
+* [Stripe](https://stripe.com/ie) – Allows individuals and businesses to make and receive payments over the Internet.
+
+### Database
+* [Heroku Postgres](https://www.heroku.com/postgres/) – PostgreSQL is one of the world's most popular relational database management systems.
+
+### Others
+
+* [GitHub](https://github.com/) - GitHub is a global company that provides hosting for software development version control using Git.
+* [Gitpod](https://gitpod.io/workspaces/) - One-click ready-to-code development environments for GitHub.
+* [Heroku](https://dashboard.heroku.com/) - Heroku is a cloud platform that lets companies build, deliver, monitor and scale apps.
+* [AWS-S3](https://aws.amazon.com/s3/) – Object storage service that offers industry-leading scalability, data availability, security, and performance.
+
+
+
+## Testing
 
 **Testing section is located [here](/readme/testing/testing.md)**
 
