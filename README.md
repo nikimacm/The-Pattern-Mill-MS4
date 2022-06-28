@@ -264,7 +264,9 @@ The fact that The Pattern Mill is a site showcasing patterns and designs, I deci
 ### COLOURS
 
 - ![#cf507b](https://via.placeholder.com/15/cf507b/000000?text=+) `#cf507b`
+
 - ![#000000](https://via.placeholder.com/15/000000/ffffff?text=+) `#000000`
+
 - ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
 
 
@@ -444,7 +446,7 @@ I relied heavily on code used in the Code Institutes tutorials to help me with t
 
 I followed this online tutorial by Gazi Adib on youtube while developing the comment model
 
-[YouTube](https://www.youtube.com/c/GreatAdib)
+[Gazi Adib YouTube](https://www.youtube.com/watch?v=MmLRE2fCcec)
 
 
 # Acknowledgements<hr>
