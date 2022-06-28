@@ -5,7 +5,7 @@
 
 ![Mokup](/readme/images/ms4_mokup.png)
 
-### Project Overview <hr>
+## Project Overview <hr>
 
 Full Stack Frameworks with Django Project for Code Institute.
 
@@ -45,16 +45,14 @@ The goal of this project was to create a a full-stack site based around business
 
 * [TESTING](#testing)
 
-* [BUGS](#bugs)
-
 * [DEPLOYMENT](#deployment)
 
 * [CREDITS](#credits)
 
  
-### UX <hr>
+# UX <hr>
 
-## Strategy  <hr>
+# Strategy  <hr>
 
 The Pattern Mill is an online store where the customer can successfully purchase JPEG or PSD files of their chosen pattern and have it emailed directly to them. The customer can also request a hard copy or catalogue to be sent to their home or business address. Registered users get a record of their order history and the ability to comment on patterns. This means they can ask questions of the site owner or other customers who have purchased specific designs.
 
@@ -94,11 +92,11 @@ As a user of The Pattern Mill site my requirements and expectations are:
 * The ability to make a decision based on site content.
 * A means to contact business owners directly for a more personal experience.
 
-## Scope <hr>
+# Scope <hr>
 
 The site is designed with simplicity and ease of use in mind. Users can easily navigate the site without any distracting influences and can find the style, colour, design or category of pattern without complications. The nav bar and footer are repeated throughout every page to ensure users can navigate to whichever page they want or click onto the social media links on the footer to find more information or contact the site owner.
 
-### Features
+## Features
 
 1. Content requirements
 * Home page with browse our catalogue button to invite customers into the store to directly view all patterns.
@@ -141,22 +139,22 @@ The site is designed with simplicity and ease of use in mind. Users can easily n
   * CRUD functionalities for orders
 
 
-## Structure <hr>
+# Structure <hr>
 
   
   ![](/readme/images/sitemap_ms4.png)
 
   The structure of the site .......
 
-## The Skeleton Plane
+# The Skeleton Plane
 
-### Wireframes <hr>
+## Wireframes <hr>
 
-Since this is a big project, I have decided to put wireframes in separate file.
+I have added my wireframes in a seperate document. 
 
 You can access them [here](/readme/wireframes/wireframes.md).
 
-### Database Design <hr>
+## Database Design <hr>
 
 As Django works with SQL databases by default, I was using SQLite in development. Heroku, however, provides a PostgreSQL database for deployment
 
@@ -253,17 +251,17 @@ The User model utilized for this project is the standard one provided by `django
 |Lineitem Total | lineitem_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=Falsee | DecimalField
 
 
-## DESIGN <hr>
+# DESIGN <hr>
 
 
 The fact that The Pattern Mill is a site showcasing patterns and designs, I decided to let these images bring life to the page while using black typograpy and white space throughout to create a clean crisp site with priority on the patterns. The landing page has a very bright pink hero image of flamingos with a black button inviting users to browse the catalogue, while the navbar, footer and store title are all black and white. It was created like this to ensure ease of navigation and a simple and elegant site.
 
 
-### DESIGN CHOICES
+## DESIGN CHOICES
 
 
 
-#### COLOURS
+### COLOURS
 
 - ![#cf507b](https://via.placeholder.com/15/cf507b/000000?text=+) `#cf507b`
 - ![#000000](https://via.placeholder.com/15/000000/ffffff?text=+) `#000000`
@@ -271,12 +269,12 @@ The fact that The Pattern Mill is a site showcasing patterns and designs, I deci
 
 
 
-#### FONTS
+### FONTS
 
 Viaoda Libre is the main font used throughout the site. I chose it for it's traditional design which has a modern feel to it. I wanted the site to feel like a gallery, so the incorporation of traditional and modern together work well for this type of store.
 
 
-#### IMAGES
+### Images
 
 
 I download all the images used throughout the site from Unsplash
@@ -291,11 +289,7 @@ and Pexels
 [View Pexels Site Here](https://www.pexels.com/)
 
 
-
-## FEATURES <hr>
-
-
-## TECHNOLOGIES USED <hr>
+# Technologies used <hr>
 
 The website is designed using following technologies:
 
@@ -330,7 +324,9 @@ The website is designed using following technologies:
 
 
 
-## Testing
+# Testing
+
+I have created my testing information in a different document.
 
 **Testing section is located [here](/readme/testing/testing.md)**
 
@@ -356,9 +352,6 @@ Validation tools used:
 - http://pep8online.com/ : Python Validation
 
 - https://jshint.com/ : JS Validator
-
-
-### Validation Results
 
 
 # Deployment
@@ -430,15 +423,30 @@ The Django Storages is passed into the installed apps in settings and also a cus
 Once the project has been loaded into an IDE of choice, run the following command in the shell to install all the required packages: pip install -r requirements.txt
 
 
-## Project creation
-
-
 ### CHANGES TO IMPLEMENT AND INCLUDE<hr>
 
-### CREDITS<hr>
+This project is a work in progress and there are many new things I will implement in the future. I have set up links for product placement on the navbar. These links will showcase mokups of the patterns on clothing, homeware and stationary. I would like to add more categories to this in the future so customers can get inspired by seeing their favoutite pattern already printed.
 
-#### Code
+
+
+# CREDITS<hr>
+
+### Images
+
+[Unsplash](https://unsplash.com/)
+
+
+[Pexels](https://www.pexels.com/)
+
+### Code
 
 I relied heavily on code used in the Code Institutes tutorials to help me with this project, especially Code Institutes Boutique ADO project. I used these tutorials to guide me through the process of creating this site and all the functionality needed. I ammended the code to suit my own project.
 
- ### ACKNOWLEDGEMENTS<hr><hr>
+I followed this online tutorial by Gazi Adib on youtube while developing the comment model
+
+[YouTube](https://www.youtube.com/c/GreatAdib)
+
+
+# Acknowledgements<hr>
+
+I would like to thank Code Institutes student support and tutor support for all their help and guidance throughout this project.
