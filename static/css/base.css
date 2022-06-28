@@ -3,9 +3,14 @@ html {
 }
 
 body {
+    height: calc(100vh - 164px);
+    display: flex;
+    margin-bottom: 50px !important;
+    padding-bottom: 50px !important;
+    position: relative; 
+    flex-direction: column;
     background: url('/media/stephane-yaich-pUV1phrNReo-unsplash.jpeg') no-repeat center center fixed;
     background-size: cover;
-    
     color: #555;
     font-family: 'Lato';
 }
@@ -95,7 +100,7 @@ body {
 .overlay {
 	height: 100%;
 	width: 100%;
-	top: 0;
+    top: 0;
 	left: 0;
 	position: fixed;
 	background: white;
@@ -128,9 +133,7 @@ a.category-badge > span.badge:hover {
 }
 
 .footer {
-    margin-top: auto;
-    position: calc(100vh - 164px);
-    border-top: 20px;
+    position: inherit;
     left: 0;
     bottom: 0 !important;
     width: 100%;

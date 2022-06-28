@@ -154,4 +154,5 @@ def delete_comment(request, pk):
     comment = Comment.objects.filter(product=pk).last()
     product_id = comment.product.id
     comment.delete()
-    return redirect(reverse('product', args=[product_id]))
+    messages.success(request, 'Comment deleted!')
+    return redirect(reverse('products'))
