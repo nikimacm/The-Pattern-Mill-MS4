@@ -143,17 +143,22 @@
         $('.toast').toast('show');
     </script>
     {% endblock %}
-</body>
 
+    {% block clear %}
+    <div id="clear"></div>
+    {% endblock %}
+
+
+</body>
 {% block footer %}
 <!-- Footer -->
-<footer class="container-fluid footer mt-auto">
-    <div class="row">
+    <footer class="container-fluid footer mt-5">
+        <div class="row">
 
-        <div class="col-sm-6 ml-auto d-flex flex-wrap align-content-center">
-            <!-- Facebook --><a class="btn btn-secondary mt-1 mr-2 " style="background-color: #ffff; color: #000;" href="https://www.facebook.com/" aria-label="first link" target="_blank" rel="noopener" role="button"><i class="fab fa-facebook-f"></i></a>
-            <!-- Pintrest --><a class="btn btn-secondary mt-1 mr-2" style="background-color: #ffff; color: #000;" href="https://www.pinterest.es/" aria-label="second link" target="_blank" rel="noopener" role="button"><i class="fab fa-twitter"></i></a>
-            <!-- Instagram --><a class="btn btn-secondary mt-1 mr-2" style="background-color: #ffff; color: #000;" href="https://www.instagram.com/" aria-label="third link" target="_blank" rel="noopener" role="button"><i class="fab fa-instagram"></i></a>
+            <div class="col-sm-6 ml-auto d-flex flex-wrap align-content-center">
+                <!-- Facebook --><a class="btn btn-secondary mt-1 mr-2 " style="background-color: #ffff; color: #000;" href="https://www.facebook.com/" aria-label="first link" target="_blank" rel="noopener" role="button"><i class="fab fa-facebook-f"></i></a>
+                <!-- Pintrest --><a class="btn btn-secondary mt-1 mr-2" style="background-color: #ffff; color: #000;" href="https://www.pinterest.es/" aria-label="second link" target="_blank" rel="noopener" role="button"><i class="fab fa-twitter"></i></a>
+                <!-- Instagram --><a class="btn btn-secondary mt-1 mr-2" style="background-color: #ffff; color: #000;" href="https://www.instagram.com/" aria-label="third link" target="_blank" rel="noopener" role="button"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
 </footer>

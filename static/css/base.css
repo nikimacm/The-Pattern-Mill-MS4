@@ -133,7 +133,8 @@ a.category-badge > span.badge:hover {
 }
 
 .footer {
-    position: inherit;
+    position: relative;
+    margin-top: 50px !important;
     left: 0;
     bottom: 0 !important;
     width: 100%;
@@ -142,6 +143,11 @@ a.category-badge > span.badge:hover {
     color: white;
     text-align: center;
   }
+
+#clear { 
+    clear: both; 
+    height: 100px; 
+}
 
   input[name='q']::placeholder {
     color: #aab7c4;

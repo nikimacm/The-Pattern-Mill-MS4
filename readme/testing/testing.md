@@ -123,7 +123,7 @@ This site was was tested on multiple browsers (Google Chrome, Mozzila Firefox an
 | Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
 | :-------------: |:----------------:| :--------------: | :---------: |
 | Clicking on `add comment` | redirects to comment form | As Expected | Pass
-| Clicking on `delete comment` | deletes comment and redirects to products | As Expected | Fail
+| Clicking on `delete comment` | deletes comment and redirects to products | As Expected | Pass
 | Clicking on `Submit` button without filling all the forms | Displays Validation to tell the user to enter all the forms | As Expected | Pass |
 | Clicking on `Submit` | redirects to product page | As Expected | Pass
 | Clicking on `Submit` | shows failure message if unable to sent | As Expected | Pass
